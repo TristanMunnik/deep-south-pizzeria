@@ -1,56 +1,29 @@
-import { useRef } from 'react'
 import { reviews } from '../data/reviews'
 
 export default function Reviews() {
-    const scrollRef = useRef(null)
-
-    const scroll = (direction) => {
-        const container = scrollRef.current
-        const scrollAmount = container.clientWidth
-        container.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth',
-        })
-    }
-
     return (
-        <section id="reviews" className="px-6 py-16 bg-white">
-            <h2 className="text-3xl font-bold text-slate-800 text-center mb-10">
-                What People Are Saying
-            </h2>
-
-            <div className="relative max-w-4xl mx-auto">
-                <button
-                    onClick={() => scroll('left')}
-                    className="absolute -left-12 top-1/2 -translate-y-1/2 z-10 bg-slate-800 text-amber-50 w-10 h-10 rounded-full shadow-md hover:bg-slate-700"
-                >
-                    ←
-                </button>
-
-                <div
-                    ref={scrollRef}
-                    className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 scrollbar-hide"
-                >
-                    {reviews.map((review) => (
-                        <div
-                            key={review.name}
-                            className="snap-start shrink-0 w-[calc(50%-12px)] bg-stone-50 rounded-lg shadow-md p-5 border border-slate-100"
-                        >
-                            <div className="text-slate-500 mb-2">
-                                {'★'.repeat(review.rating)}
-                            </div>
-                            <p className="text-stone-600 text-sm mb-3">"{review.text}"</p>
-                            <p className="text-slate-800 font-semibold text-sm">— {review.name}</p>
-                        </div>
-                    ))}
+        <section id="reviews" className="bg-white px-6 py-20">
+            <div className="mx-auto max-w-6xl">
+                <div className="mb-10 text-center">
+                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">
+                        Loved by locals
+                    </p>
+                    <h2 className="text-3xl font-black text-slate-800 sm:text-4xl">
+                        What People Are Saying
+                    </h2>
                 </div>
 
-                <button
-                    onClick={() => scroll('right')}
-                    className="absolute -right-12 top-1/2 -translate-y-1/2 z-10 bg-slate-800 text-amber-50 w-10 h-10 rounded-full shadow-md hover:bg-slate-700"
-                >
-                    →
-                </button>
+                <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    {reviews.map((review) => (
+                        <article key={review.name} className="review-card">
+                            <div className="mb-4 text-lg text-amber-500" aria-label={`${review.rating} out of 5 stars`}>
+                                {'★'.repeat(review.rating)}
+                            </div>
+                            <p className="mb-5 text-sm leading-7 text-stone-600">“{review.text}”</p>
+                            <p className="text-sm font-semibold text-slate-800">— {review.name}</p>
+                        </article>
+                    ))}
+                </div>
             </div>
         </section>
     )

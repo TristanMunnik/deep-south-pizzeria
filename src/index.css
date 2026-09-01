@@ -1,12 +1,45 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #0f172a;
+  background: #f8f5f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f5f1;
 }
-.scrollbar-hide {
-  scrollbar-width: none;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.35);
 }
