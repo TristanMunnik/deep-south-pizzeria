@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-3">
         <div
           className="bg-cover bg-center"
-          style={{ backgroundImage: "url('/Pizza1.jpg')" }}
+          style={{ backgroundImage: "url('/Pizza4.jpg')" }}
         ></div>
         <div
           className="bg-cover bg-center"
