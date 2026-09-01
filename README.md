@@ -1,16 +1,70 @@
-# React + Vite
+# Deep South Pizzeria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page built for [Deep South Pizzeria](https://capetownexplore.co.za/listing/deep-south-pizzeria-simons-town/), a small wood-fired pizza shop in Simon's Town, Cape Town, where I work as Front of House Manager. Built as a real-world portfolio project — the goal was to design and ship something for an actual local business, not a tutorial clone.
 
-Currently, two official plugins are available:
+**Live demo:** _coming soon_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive layout that adapts from mobile to desktop
+- Sticky navigation with smooth scroll to each section
+- Hero section with a full-width photo background and dark overlay for readability
+- Menu section pulling real menu data, with hover animations on each item
+- Customer reviews section with a horizontal scrolling carousel (arrow navigation + swipe support)
+- Visit/contact section with the shop's address, hours, and phone number
+- Color palette drawn directly from the pizzeria's real signage and interior (slate blue, cream, and warm gold tones)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** – component structure and UI
+- **Vite** – build tool and dev server
+- **Tailwind CSS** – utility-first styling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Clone the repo and install dependencies:
+
+```bash
+git clone https://github.com/TristanMunnik/deep-south-pizzeria.git
+cd deep-south-pizzeria
+npm install
+```
+
+Run the local dev server:
+
+```bash
+npm run dev
+```
+
+Then open `http://localhost:5173` in your browser.
+
+## Project Structure
+
+```
+src/
+├─ components/
+│  ├─ Header.jsx
+│  ├─ Hero.jsx
+│  ├─ Menu.jsx
+│  ├─ Reviews.jsx
+│  ├─ Visit.jsx
+│  └─ Footer.jsx
+├─ data/
+│  ├─ menu.js
+│  └─ reviews.js
+├─ App.jsx
+├─ main.jsx
+└─ index.css
+```
+
+Each section of the site is broken into its own component, with menu and review content kept in separate data files so they're easy to update without touching any layout code.
+
+## Roadmap
+
+- [ ] Deploy to a live URL
+- [ ] Swap in additional real photos of the shop and food
+- [ ] Explore wiring up live Google Reviews via the Places API
+
+## About
+
+Built by [Tristan Munnik](https://github.com/TristanMunnik), a Systems Development diploma student aiming for a career as a frontend/web developer.
