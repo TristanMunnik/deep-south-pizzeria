@@ -37,8 +37,13 @@ export default function Visit() {
                         </div>
 
                         <div className="flex flex-col gap-3 sm:flex-row sm:justify-start">
-                            <a href="tel:0211802757" className="primary-btn w-full sm:w-auto">
-                                Call Now
+                            <a
+                                href="https://www.google.com/search?q=Deep+South+Pizzeria+Simon%27s+Town"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="primary-btn w-full sm:w-auto"
+                            >
+                                View on Google
                             </a>
                             <a href="#home" className="secondary-btn w-full sm:w-auto">
                                 Back to Top

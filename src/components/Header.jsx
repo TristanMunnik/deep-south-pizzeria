@@ -18,7 +18,7 @@ export default function Header() {
           <a href="#home" className="transition hover:text-[#d9b38a]">Home</a>
           <a href="#menu" className="transition hover:text-[#d9b38a]">Menu</a>
           <a href="#reviews" className="transition hover:text-[#d9b38a]">Reviews</a>
-          <a href="#visit" className="transition hover:text-[#d9b38a]">Visit</a>
+          <a href="#visit" className="transition hover:text-[#d9b38a]">Location</a>
         </nav>
 
         <p className="text-[1rem] font-medium text-stone-100">
