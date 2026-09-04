@@ -3,9 +3,6 @@ export default function Visit() {
         <section id="visit" className="bg-slate-200 px-6 py-20">
             <div className="mx-auto max-w-5xl">
                 <div className="mb-10 text-center">
-                    <p className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-amber-700">
-                        Drop in anytime
-                    </p>
                     <h2 className="text-3xl font-black text-slate-800 sm:text-4xl">Visit Us</h2>
                 </div>
 
