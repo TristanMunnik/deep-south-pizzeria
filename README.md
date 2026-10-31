@@ -4,6 +4,12 @@ A responsive landing page built for [Deep South Pizzeria](https://capetownexplor
 
 **Live demo:** _coming soon_
 
+## Screenshots
+
+![Hero and menu sections](docs/screenshots/home-menu.png)
+
+![Reviews carousel and visit section](docs/screenshots/reviews-visit.png)
+
 ## Features
 
 - Responsive layout that adapts from mobile to desktop
