@@ -13,7 +13,6 @@
     #f8f5f1;
 }
 
-.hero-section,
 .menu-card,
 .review-card,
 .visit-photo,
@@ -95,10 +94,17 @@
   transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
-.menu-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 32px rgba(36, 54, 47, 0.12);
-  border-color: rgba(157, 108, 77, 0.22);
+.menu-card-header {
+  margin-bottom: 1rem;
+}
+
+/* Hover lift only on devices that can hover, so taps on phones don't get stuck */
+@media (hover: hover) {
+  .menu-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 32px rgba(36, 54, 47, 0.12);
+    border-color: rgba(157, 108, 77, 0.22);
+  }
 }
 
 .review-card {
@@ -115,12 +121,11 @@
 
 .menu-badge {
   display: inline-flex;
-  margin-bottom: 1rem;
   border-radius: 9999px;
   background: rgba(217, 179, 138, 0.16);
   color: #6e4b33;
-  padding: 0.35rem 0.7rem;
-  font-size: 0.68rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -186,6 +191,31 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Mobile: flatten menu cards into a compact list with dividers */
+@media (max-width: 767px) {
+  .menu-card {
+    animation: none;
+    border: 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0.85rem 0;
+  }
+
+  .menu-card:last-child {
+    border-bottom: 0;
+  }
+
+  .menu-card-header {
+    margin-bottom: 0.25rem;
+  }
+
+  .menu-card h3 {
+    font-size: 1rem;
   }
 }
 

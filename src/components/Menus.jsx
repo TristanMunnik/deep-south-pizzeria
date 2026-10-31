@@ -13,12 +13,14 @@ export default function Menu() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
           {menuItems.map((item) => (
             <article key={item.name} className="menu-card">
-              {item.featured && <span className="menu-badge">Most loved</span>}
-              <div className="mb-4 flex items-start justify-between gap-3">
-                <h3 className="text-lg font-bold text-slate-800">{item.name}</h3>
+              <div className="menu-card-header flex items-start justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <h3 className="text-lg font-bold text-slate-800">{item.name}</h3>
+                  {item.featured && <span className="menu-badge">Most loved</span>}
+                </div>
                 <span className="price-tag">R{item.price}</span>
               </div>
               <p className="text-sm leading-6 text-stone-600">{item.description}</p>
