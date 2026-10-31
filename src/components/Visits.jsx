@@ -30,7 +30,9 @@ export default function Visit() {
 
                         <div className="mb-7">
                             <h3 className="mb-2 text-lg font-bold text-slate-800">Contact</h3>
-                            <p className="text-stone-600">021 180 2757</p>
+                            <p className="text-stone-600">
+                                <a href="tel:0211802757" className="hover:text-slate-800 hover:underline">021 180 2757</a>
+                            </p>
                         </div>
 
                         <div className="flex flex-col gap-3 sm:flex-row sm:justify-start">

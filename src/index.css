@@ -14,6 +14,13 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem; /* keeps section headings clear of the sticky header */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {

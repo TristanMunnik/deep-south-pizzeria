@@ -7,10 +7,11 @@ A responsive landing page built for [Deep South Pizzeria](https://capetownexplor
 ## Features
 
 - Responsive layout that adapts from mobile to desktop
-- Sticky navigation with smooth scroll to each section
-- Hero section with a full-width photo background and dark overlay for readability
+- Sticky navigation with smooth scroll to each section, plus a hamburger menu on mobile
+- Tap-to-call phone links
+- Hero section with a three-photo background and dark overlay for readability
 - Menu section pulling real menu data, with hover animations on each item
-- Customer reviews section with a horizontal scrolling carousel (arrow navigation + swipe support)
+- Customer reviews section with a horizontal scrolling carousel (arrow buttons + touch scrolling)
 - Visit/contact section with the shop's address, hours, and phone number
 - Color palette drawn directly from the pizzeria's real signage and interior (slate blue, cream, and warm gold tones)
 
@@ -45,9 +46,9 @@ src/
 ├─ components/
 │  ├─ Header.jsx
 │  ├─ Hero.jsx
-│  ├─ Menu.jsx
+│  ├─ Menus.jsx
 │  ├─ Reviews.jsx
-│  ├─ Visit.jsx
+│  ├─ Visits.jsx
 │  └─ Footer.jsx
 ├─ data/
 │  ├─ menu.js

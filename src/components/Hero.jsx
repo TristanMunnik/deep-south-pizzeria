@@ -24,9 +24,9 @@ export default function Hero() {
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#d9b38a] sm:text-sm">
           Simon's Town favourite
         </p>
-        <h2 className="hero-title mb-6 text-4xl font-black tracking-tight text-amber-50 sm:text-5xl lg:text-7xl">
+        <h1 className="hero-title mb-6 text-4xl font-black tracking-tight text-amber-50 sm:text-5xl lg:text-7xl">
           Deep South Pizzeria
-        </h2>
+        </h1>
         <p className="mx-auto max-w-2xl text-base text-stone-100 sm:text-xl">
           Authentic wood-fired pizza, vibrant toppings, and warm harbour-town hospitality served fresh every day.
         </p>
